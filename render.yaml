@@ -2,6 +2,7 @@ services:
   - type: web
     name: chadkrishi
     runtime: docker
+    plan: free
     dockerfilePath: ./deploy/Dockerfile.render
     healthCheckPath: /api/v1/health
     envVars:
