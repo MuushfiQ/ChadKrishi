@@ -1,0 +1,29 @@
+USE defaultdb;
+
+UPDATE crops
+SET bengali_name = CONVERT(UNHEX('E0A6ACE0A787E0A697E0A781E0A6A8') USING utf8mb4)
+WHERE name = 'Brinjal';
+
+UPDATE crops
+SET bengali_name = CONVERT(UNHEX('E0A6B0E0A6B8E0A781E0A6A8') USING utf8mb4)
+WHERE name = 'Garlic';
+
+UPDATE crops
+SET bengali_name = CONVERT(UNHEX('E0A6AEE0A6B0E0A6BFE0A69A') USING utf8mb4)
+WHERE name = 'Pepper';
+
+UPDATE crops
+SET bengali_name = CONVERT(UNHEX('E0A6B6E0A6B8E0A6BE') USING utf8mb4)
+WHERE name = 'Cucumber';
+
+UPDATE crops
+SET bengali_name = CONVERT(UNHEX('E0A6B2E0A6BEE0A6B220E0A6B6E0A6BEE0A695') USING utf8mb4)
+WHERE name = 'Lal shak';
+
+UPDATE crops
+SET bengali_name = CONVERT(UNHEX('E0A69FE0A6AEE0A787E0A69FE0A78B') USING utf8mb4)
+WHERE name = 'Tomato';
+
+UPDATE crops
+SET bengali_name = CONVERT(UNHEX('E0A6AEE0A6B0E0A6BFE0A69A') USING utf8mb4)
+WHERE name = 'Chili';

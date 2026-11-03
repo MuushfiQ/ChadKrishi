@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: chadkrishi
+    runtime: docker
+    dockerfilePath: ./deploy/Dockerfile.render
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
+      - key: WEATHER_CACHE_MINUTES
+        value: "30"
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: DATABASE_DSN
+        sync: false
+      - key: DATABASE_TLS_CA_PEM
+        sync: false
+      - key: DATABASE_TLS_SERVER_NAME
+        sync: false

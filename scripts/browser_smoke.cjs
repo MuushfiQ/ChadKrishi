@@ -1,0 +1,36 @@
+/* Run after api_smoke.py against an isolated local installation.
+   Requires Playwright (npm install --no-save playwright; npx playwright install chromium).
+   PLAYWRIGHT_MODULE may point to an existing module. Screenshots stay in OS temp.
+*/
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const fs=require('node:fs');const os=require('node:os');const path=require('node:path');const assert=require('node:assert/strict');
+const fixture=JSON.parse(fs.readFileSync(process.env.TEST_FIXTURE_PATH||path.join(os.tmpdir(),'chadkrishi-fixture.json'),'utf8'));
+const base=process.env.TEST_WEB_URL||'http://127.0.0.1:5173';
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||undefined,args:['--no-sandbox']});const contexts=[];const errors=[];
+ async function login(index){const ctx=await browser.newContext({viewport:{width:1440,height:1000}});contexts.push(ctx);const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));p.on('dialog',d=>d.accept());await p.goto(base+'/auth');await p.locator('.auth-switcher').getByRole('button',{name:'Log in',exact:true}).click();await p.getByLabel('Email address').fill(fixture.accounts[index].email);await p.getByLabel('Password').fill(fixture.accounts[index].password);await p.locator('form').getByRole('button',{name:'Log in',exact:true}).click();await p.waitForURL('**/dashboard');return p}
+ const seller=await login(0),buyer=await login(1),admin=await login(3);
+ await seller.goto(base+'/profile');// Profile persistence across reload.
+ assert.equal(await seller.locator('input[name="name"]').inputValue(),'Ayesha Rahman');
+ await seller.goto(base+'/plants');await seller.getByRole('heading',{name:'Rooftop companion',exact:true}).waitFor();
+ await seller.goto(base+'/community');await seller.getByRole('heading',{name:'Community garden',exact:true}).waitFor();
+ await seller.getByRole('button',{name:'＋ Share a post'}).click();await seller.getByLabel('Title (optional)',{exact:false}).fill('Browser garden story');await seller.getByLabel('Caption / story').fill('A fresh start from our rooftop. ছাদকৃষির গল্প।');
+ const seed=await (await seller.request.get(base+'/api/v1/posts')).json();const photoPath=seed.posts.find(p=>p.id===fixture.postId).imagePath;const photo=await (await seller.request.get(base+photoPath)).body();
+ await seller.getByLabel('Photo (optional)').setInputFiles({name:'garden.png',mimeType:'image/png',buffer:photo});await seller.getByAltText('Selected upload').waitFor();
+ await seller.getByRole('button',{name:'Publish post',exact:true}).click();await seller.getByRole('heading',{name:'Browser garden story'}).waitFor();
+ await buyer.goto(base+'/community');const card=buyer.locator('article').filter({has:buyer.getByRole('heading',{name:'Browser garden story'})});await card.getByRole('button',{name:'love reaction'}).click();await card.getByRole('button',{name:'0 comments',exact:true}).click();await card.getByLabel('Add a comment').fill('Lovely rooftop story!');await card.getByRole('button',{name:'Comment',exact:true}).click();await card.getByText('Lovely rooftop story!',{exact:true}).waitFor();
+ await seller.goto(base+'/marketplace');await seller.getByRole('button',{name:'＋ Create listing'}).click();await seller.getByLabel('Title',{exact:true}).fill('Browser-tested plant lot');await seller.getByLabel('Caption / story').fill('Two healthy seedlings for a new gardener.');await seller.getByLabel('Total price for the whole listing (BDT)').fill('300');await seller.getByLabel('Quantity',{exact:true}).fill('2');await seller.getByRole('button',{name:'Publish post',exact:true}).click();await seller.getByRole('heading',{name:'Browser-tested plant lot'}).waitFor();
+ await buyer.goto(base+'/marketplace');const listing=buyer.locator('article').filter({has:buyer.getByRole('heading',{name:'Browser-tested plant lot'})});await listing.getByRole('button',{name:'Buy this listing'}).click();await buyer.waitForURL('**/orders');const buyOrder=buyer.locator('article').filter({has:buyer.getByRole('heading',{name:'Browser-tested plant lot'})});await buyOrder.getByLabel('How did you pay?').selectOption('bkash');await buyOrder.getByLabel('Transaction reference (optional)').fill('UI-TEST');await buyOrder.getByRole('button',{name:'I have paid'}).click();await buyOrder.getByText('Buyer marked Paid · awaiting seller',{exact:true}).waitFor();
+ await seller.goto(base+'/orders');const sellOrder=seller.locator('article').filter({has:seller.getByRole('heading',{name:'Browser-tested plant lot'})});await sellOrder.getByRole('button',{name:'Yes, payment received'}).click();await sellOrder.getByText('Payment received · Sold',{exact:true}).waitFor();
+ await buyer.reload();await buyer.getByText('Payment received · Sold',{exact:true}).first().waitFor();
+ await admin.goto(base+'/admin');const archived=admin.locator('article').filter({has:admin.getByRole('heading',{name:'Browser-tested plant lot'})});await archived.getByRole('button',{name:'Archive listing'}).click();await archived.getByRole('button',{name:'Archived',exact:true}).waitFor();
+ await buyer.reload();await buyer.locator('article').filter({has:buyer.getByRole('heading',{name:'Browser-tested plant lot'})}).getByText('Listing archived. Your transaction record is retained.').waitFor();
+ await buyer.goto(base+`/messages?thread=${fixture.thread}`);await buyer.getByLabel('Message',{exact:true}).fill('Hello from the browser test');await buyer.getByRole('button',{name:'Send',exact:true}).click();await buyer.getByText('Hello from the browser test',{exact:true}).waitFor();
+ await seller.goto(base+`/messages?thread=${fixture.thread}`);await seller.getByText('Hello from the browser test',{exact:true}).waitFor();await seller.getByLabel('Message',{exact:true}).fill('Your message arrived!');await seller.getByRole('button',{name:'Send',exact:true}).click();await buyer.getByText('Your message arrived!',{exact:true}).waitFor({timeout:12000});
+ await seller.goto(base+'/community');await seller.getByRole('heading',{name:'Browser garden story'}).waitFor();await seller.screenshot({path:path.join(os.tmpdir(),'chadkrishi-desktop.png'),fullPage:true});
+ await buyer.setViewportSize({width:390,height:844});for(const route of ['/community','/marketplace','/orders',`/messages?thread=${fixture.thread}`,'/plants','/profile']){await buyer.goto(base+route);await buyer.locator('.page-content').first().waitFor();assert(await buyer.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`overflow on ${route}`)}
+ await buyer.goto(base+'/community');await buyer.getByRole('heading',{name:'Browser garden story'}).waitFor();await buyer.screenshot({path:path.join(os.tmpdir(),'chadkrishi-mobile.png'),fullPage:true});
+ await buyer.goto(base+'/profile');await buyer.getByRole('button',{name:'Sign out',exact:true}).click();await buyer.waitForURL('**/auth');await buyer.goto(base+'/orders');await buyer.waitForURL('**/auth');assert.deepEqual(errors,[]);
+ console.log('PASS desktop/mobile browser: login, profile/plant persistence, caption/comment/reaction, Buy/Paid/Received/Sold/archive/history, bidirectional chat, private-route logout, no JS errors or horizontal overflow.');
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)})

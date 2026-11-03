@@ -1,0 +1,908 @@
+{
+  "version": 1,
+  "provenance": "Curated from user-supplied crop_information.pdf evidence sheets. PDF JSON/table right edges are clipped; not a lossless JSON import. Independently rechecked fields are distinguished from PDF-reported facts.",
+  "sources": {
+    "brinjal_bd": {
+      "id": "brinjal_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/15",
+      "title": "BAMIS: বেগুন",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "chili_bd": {
+      "id": "chili_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/45",
+      "title": "BAMIS: মরিচ",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "okra_bd": {
+      "id": "okra_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/28",
+      "title": "BAMIS: ঢেঁড়স",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "amaranth_bd": {
+      "id": "amaranth_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/20",
+      "title": "BAMIS: লালশাক",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "malabar_bd": {
+      "id": "malabar_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/27",
+      "title": "BAMIS: পুঁইশাক",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "spinach_bd": {
+      "id": "spinach_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/31",
+      "title": "BAMIS: পালংশাক",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "opened_but_content_conflict"
+    },
+    "coriander_bd": {
+      "id": "coriander_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/50",
+      "title": "BAMIS: ধনিয়া",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "radish_bd": {
+      "id": "radish_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/56",
+      "title": "BAMIS: মুলা",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "cucumber_bd": {
+      "id": "cucumber_bd",
+      "url": "https://www.bamis.gov.bd/crops/view/19",
+      "title": "BAMIS: শসা",
+      "section": "বপনের সময় / উন্নত জাত",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "tomato_bd": {
+      "id": "tomato_bd",
+      "url": "https://ais.gov.bd/pages/ekrishi/%E0%A6%9F%E0%A6%AE%E0%A7%87%E0%A6%9F%E0%A7%8B-jjyje5-69c366fb37922c2646d15a3a",
+      "title": "AIS: টমেটো",
+      "section": "বপন ও রোপণ",
+      "checkedAt": "2026-10-27",
+      "status": "unavailable_on_recheck"
+    },
+    "vt": {
+      "id": "vt",
+      "url": "https://www.pubs.ext.vt.edu/426/426-336/426-336.html",
+      "title": "Virginia Cooperative Extension: containers",
+      "section": "Sunlight / vegetable table",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "ncsu": {
+      "id": "ncsu",
+      "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/18-plants-grown-in-containers",
+      "title": "NC State: Plants Grown in Containers",
+      "section": "Table 18-1 / Container Location / Size",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "csu": {
+      "id": "csu",
+      "url": "https://extension.colostate.edu/resource/vegetable-gardening-in-containers/",
+      "title": "Colorado State: container vegetables",
+      "section": "Tables 1 and 2",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "okra_pot": {
+      "id": "okra_pot",
+      "url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-okra/",
+      "title": "Alabama Extension: Grow More Okra",
+      "section": "Sun / container / drainage",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "malabar": {
+      "id": "malabar",
+      "url": "https://hort.extension.wisc.edu/articles/malabar-spinach-basella-alba/",
+      "title": "Wisconsin Extension: Malabar spinach",
+      "section": "Growing Malabar Spinach",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "cilantro": {
+      "id": "cilantro",
+      "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "title": "Utah State: Cilantro/Coriander",
+      "section": "Introduction / Water / indoors",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "amaranth": {
+      "id": "amaranth",
+      "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/amaranth/",
+      "title": "UF/IFAS: Amaranth",
+      "section": "Vegetable amaranth",
+      "checkedAt": "2026-10-27",
+      "status": "rechecked"
+    },
+    "supplied_report": {
+      "id": "supplied_report",
+      "url": null,
+      "title": "Supplied crop_information.pdf (Gemini research)",
+      "section": "Crop evidence sheets; reported supplementary facts, not independently verified",
+      "checkedAt": "2026-10-27",
+      "status": "report_only"
+    }
+  },
+  "crops": [
+    {
+      "slug": "brinjal",
+      "legacyName": "Brinjal",
+      "name": "Brinjal",
+      "bengaliName": "বেগুন",
+      "scientificName": "Solanum melongena",
+      "varietyNote": "General Bangladesh seasonal guidance; choose the season-appropriate variety.",
+      "seedMonths": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "transplantMonths": null,
+      "minSunHours": 6,
+      "preferredSunHours": [
+        8,
+        10
+      ],
+      "minDepthCm": 30.48,
+      "minVolumeL": 18.927,
+      "containerSupported": true,
+      "supportRequired": true,
+      "coreVerified": true,
+      "seasonNote": "Early Jan–mid Apr or late Aug–mid Oct. Month-level overlap is not an exact planting date.",
+      "containerNote": "NC State 12–16 in depth vs CSU 8 in; this app uses the NC State lower bound. Volume 5 US gal per plant.",
+      "careNote": "Inspect tender shoots and fruit for damage; ask an agricultural adviser if symptoms persist.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "brinjal_bd",
+        "vt",
+        "ncsu",
+        "csu",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "brinjal_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [
+          "vt"
+        ],
+        "minDepthCm": [
+          "ncsu"
+        ],
+        "minVolumeL": [
+          "vt"
+        ],
+        "containerSupported": [
+          "vt",
+          "ncsu",
+          "csu"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 60,
+        "max": 65,
+        "unit": "days",
+        "from": "transplant",
+        "note": "BARI-1/4",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "Core season/light/container evidence rechecked; measurements remain conditional across cultivars.",
+      "imagePath": null
+    },
+    {
+      "slug": "tomato",
+      "legacyName": "Tomato",
+      "name": "Tomato",
+      "bengaliName": "টমেটো",
+      "scientificName": "Solanum lycopersicum",
+      "varietyNote": "Winter tomato calendar only; do not mix summer/hybrid calendars.",
+      "seedMonths": [
+        10,
+        11
+      ],
+      "transplantMonths": [
+        11,
+        12
+      ],
+      "minSunHours": 6,
+      "preferredSunHours": [
+        8,
+        10
+      ],
+      "minDepthCm": 30.48,
+      "minVolumeL": 18.927,
+      "containerSupported": true,
+      "supportRequired": true,
+      "coreVerified": false,
+      "seasonNote": "Report: second week Oct–first week Nov sowing; late Nov–early Dec transplant. AIS could not be rechecked.",
+      "containerNote": "General types: 5 US gal and 12–24 in depth. Small cherry-type measurements are not used for standard tomatoes.",
+      "careNote": "Use suitable supports and observe soil moisture consistently.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "tomato_bd",
+        "vt",
+        "ncsu",
+        "csu",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "tomato_bd"
+        ],
+        "transplantMonths": [
+          "tomato_bd"
+        ],
+        "minSunHours": [
+          "vt"
+        ],
+        "minDepthCm": [
+          "ncsu"
+        ],
+        "minVolumeL": [
+          "vt"
+        ],
+        "containerSupported": [
+          "vt",
+          "ncsu",
+          "csu"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 60,
+        "max": 65,
+        "unit": "days",
+        "from": "transplant",
+        "note": "BARI-22; BARI-23 differs",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "One or more required fields are missing, conflicting, or not independently verified. Browse as research; not an automatic match.",
+      "imagePath": null
+    },
+    {
+      "slug": "chili",
+      "legacyName": "Chili",
+      "name": "Chili",
+      "bengaliName": "মরিচ",
+      "scientificName": "Capsicum annuum / Capsicum frutescens",
+      "varietyNote": "BARI-1/2/3 have different seasons; confirm the packet cultivar.",
+      "seedMonths": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "transplantMonths": null,
+      "minSunHours": 6,
+      "preferredSunHours": [
+        8,
+        10
+      ],
+      "minDepthCm": 30.48,
+      "minVolumeL": 7.571,
+      "containerSupported": true,
+      "supportRequired": true,
+      "coreVerified": true,
+      "seasonNote": "BAMIS: Feb 15–Mar 15; Jul 15–Sep 15; Sep–Oct. Sowing only.",
+      "containerNote": "General pepper guidance, not a BARI cultivar trial: NC State 2 US gal and 12–16 in; CSU 8 in and 2–5 gal.",
+      "careNote": "Inspect leaf undersides and avoid standing water; do not diagnose leaf curl from weather.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "chili_bd",
+        "vt",
+        "ncsu",
+        "csu",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "chili_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [
+          "vt"
+        ],
+        "minDepthCm": [
+          "ncsu"
+        ],
+        "minVolumeL": [
+          "ncsu"
+        ],
+        "containerSupported": [
+          "vt",
+          "ncsu",
+          "csu"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 50,
+        "max": 60,
+        "unit": "days",
+        "from": "transplant",
+        "note": "green chili",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "Core season/light/container evidence rechecked; measurements remain conditional across cultivars.",
+      "imagePath": null
+    },
+    {
+      "slug": "okra",
+      "legacyName": "Okra",
+      "name": "Okra",
+      "bengaliName": "ঢেঁড়স",
+      "scientificName": "Abelmoschus esculentus",
+      "varietyNote": "BAMIS general calendar; BARI variety-specific windows may differ.",
+      "seedMonths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "transplantMonths": null,
+      "minSunHours": 6,
+      "preferredSunHours": null,
+      "minDepthCm": null,
+      "minVolumeL": 18.927,
+      "containerSupported": true,
+      "supportRequired": false,
+      "coreVerified": true,
+      "seasonNote": "মাঘ–চৈত্র (roughly mid Jan–mid Apr). Check exact local dates.",
+      "containerNote": "5–7 US gal per plant; crop-specific depth unknown. Generic vegetable depths are not substituted.",
+      "careNote": "Check young pods and harvest according to the variety; keep drainage clear.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "okra_bd",
+        "okra_pot",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "okra_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [
+          "okra_pot"
+        ],
+        "minDepthCm": [],
+        "minVolumeL": [
+          "okra_pot"
+        ],
+        "containerSupported": [
+          "okra_pot"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 50,
+        "max": 51,
+        "unit": "days",
+        "from": "seed",
+        "note": "BARI-1 estimate in report",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "Core season/light/container evidence rechecked; measurements remain conditional across cultivars.",
+      "imagePath": null
+    },
+    {
+      "slug": "red_amaranth",
+      "legacyName": "Lal shak",
+      "name": "Lal shak",
+      "bengaliName": "লালশাক",
+      "scientificName": "Amaranthus tricolor / Amaranthus cruentus",
+      "varietyNote": "BARI Lalshak-1 / Altapati; scientific species should be confirmed for the actual seed.",
+      "seedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "transplantMonths": null,
+      "minSunHours": null,
+      "preferredSunHours": null,
+      "minDepthCm": null,
+      "minVolumeL": null,
+      "containerSupported": null,
+      "supportRequired": false,
+      "coreVerified": false,
+      "seasonNote": "BAMIS lists year-round sowing, especially winter.",
+      "containerNote": "Species-specific pot size and numeric sunlight threshold not confirmed. General leafy-vegetable guidance is insufficient.",
+      "careNote": "Observe seedling crowding and drainage; harvest timing depends on variety and leaf size.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "amaranth_bd",
+        "amaranth",
+        "ncsu",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "amaranth_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [],
+        "minDepthCm": [],
+        "minVolumeL": [],
+        "containerSupported": [
+          "amaranth",
+          "ncsu"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 20,
+        "max": 35,
+        "unit": "days",
+        "from": "seed",
+        "note": "mixed harvest stages / varieties",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "One or more required fields are missing, conflicting, or not independently verified. Browse as research; not an automatic match.",
+      "imagePath": null
+    },
+    {
+      "slug": "malabar_spinach",
+      "legacyName": "Malabar Spinach",
+      "name": "Malabar Spinach",
+      "bengaliName": "পুঁইশাক",
+      "scientificName": "Basella alba",
+      "varietyNote": "BARI Puishak-1/2; choose a variety suited to the available support.",
+      "seedMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "transplantMonths": null,
+      "minSunHours": null,
+      "preferredSunHours": null,
+      "minDepthCm": null,
+      "minVolumeL": null,
+      "containerSupported": null,
+      "supportRequired": true,
+      "coreVerified": false,
+      "seasonNote": "March–August sowing; transplant months not established.",
+      "containerNote": "Source says full sun and sturdy trellis; no verified numeric sunlight or pot-size threshold.",
+      "careNote": "Check climbing support and moisture; avoid leaving the pot waterlogged.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "malabar_bd",
+        "malabar",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "malabar_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [],
+        "minDepthCm": [],
+        "minVolumeL": [],
+        "containerSupported": [
+          "malabar"
+        ],
+        "supportRequired": [
+          "malabar"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 30,
+        "max": 35,
+        "unit": "days",
+        "from": "seed",
+        "note": "BARI-2",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "One or more required fields are missing, conflicting, or not independently verified. Browse as research; not an automatic match.",
+      "imagePath": null
+    },
+    {
+      "slug": "spinach",
+      "legacyName": "Spinach",
+      "name": "Spinach",
+      "bengaliName": "পালংশাক",
+      "scientificName": "Spinacia oleracea",
+      "varietyNote": "BARI Palongshak-1 / Sathi; season needs an additional clean Bangladesh source.",
+      "seedMonths": [
+        10,
+        11
+      ],
+      "transplantMonths": null,
+      "minSunHours": 3,
+      "preferredSunHours": null,
+      "minDepthCm": 10.16,
+      "minVolumeL": 3.785,
+      "containerSupported": true,
+      "supportRequired": false,
+      "coreVerified": false,
+      "seasonNote": "Report and BAMIS sowing line: mid Oct–first week Nov. BAMIS page also contains unrelated garlic text; not used as a verified calendar.",
+      "containerNote": "NC State: 1 US gal, 4–6 in depth and 3–5 h sun tolerance. CSU: 8 in depth and 6 h. Conflict retained.",
+      "careNote": "Observe heat stress and leaf condition; these are observation prompts, not a diagnosis.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "spinach_bd",
+        "ncsu",
+        "csu",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "spinach_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [
+          "ncsu"
+        ],
+        "minDepthCm": [
+          "ncsu"
+        ],
+        "minVolumeL": [
+          "ncsu"
+        ],
+        "containerSupported": [
+          "ncsu",
+          "csu"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 30,
+        "max": 45,
+        "unit": "days",
+        "from": "seed",
+        "note": "report range",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "One or more required fields are missing, conflicting, or not independently verified. Browse as research; not an automatic match.",
+      "imagePath": null
+    },
+    {
+      "slug": "coriander",
+      "legacyName": "Coriander",
+      "name": "Coriander",
+      "bengaliName": "ধনেপাতা",
+      "scientificName": "Coriandrum sativum",
+      "varietyNote": "BARI Dhonia / leaf varieties; leaf harvest and seed production are different goals.",
+      "seedMonths": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "transplantMonths": null,
+      "minSunHours": 3,
+      "preferredSunHours": null,
+      "minDepthCm": 30.48,
+      "minVolumeL": null,
+      "containerSupported": true,
+      "supportRequired": false,
+      "coreVerified": true,
+      "seasonNote": "BAMIS: most months except extreme heat in April–June, depending on variety.",
+      "containerNote": "12 in is general tap-rooted herb guidance, not cultivar-specific; volume unknown. NC State partial shade guidance applies to herbs.",
+      "careNote": "Check for bolting and soil moisture; avoid excessive watering.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "coriander_bd",
+        "vt",
+        "ncsu",
+        "cilantro",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "coriander_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [
+          "ncsu"
+        ],
+        "minDepthCm": [
+          "ncsu"
+        ],
+        "minVolumeL": [],
+        "containerSupported": [
+          "vt",
+          "ncsu",
+          "cilantro"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 30,
+        "max": 35,
+        "unit": "days",
+        "from": "seed",
+        "note": "leaf harvest",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "Core season/light/container evidence rechecked; measurements remain conditional across cultivars.",
+      "imagePath": null
+    },
+    {
+      "slug": "radish",
+      "legacyName": "Radish",
+      "name": "Radish",
+      "bengaliName": "মুলা",
+      "scientificName": "Raphanus sativus",
+      "varietyNote": "Bangladesh long-root BARI radishes must not inherit small round-radish pot sizes.",
+      "seedMonths": [
+        9,
+        10,
+        11
+      ],
+      "transplantMonths": null,
+      "minSunHours": 3,
+      "preferredSunHours": null,
+      "minDepthCm": null,
+      "minVolumeL": null,
+      "containerSupported": true,
+      "supportRequired": false,
+      "coreVerified": false,
+      "seasonNote": "Mid Sep–mid Nov sowing.",
+      "containerNote": "Foreign guides differ (4–6 or 8 in depth); these cannot establish adequate depth for long BARI radishes. Kept unknown.",
+      "careNote": "Check seedling spacing and even moisture; confirm room for the selected root length.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "radish_bd",
+        "ncsu",
+        "csu",
+        "vt",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "radish_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [
+          "ncsu"
+        ],
+        "minDepthCm": [],
+        "minVolumeL": [],
+        "containerSupported": [
+          "ncsu",
+          "csu",
+          "vt"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 40,
+        "max": 45,
+        "unit": "days",
+        "from": "seed",
+        "note": "BARI root harvest",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "One or more required fields are missing, conflicting, or not independently verified. Browse as research; not an automatic match.",
+      "imagePath": null
+    },
+    {
+      "slug": "cucumber",
+      "legacyName": "Cucumber",
+      "name": "Cucumber",
+      "bengaliName": "শসা",
+      "scientificName": "Cucumis sativus",
+      "varietyNote": "BAMIS lists multiple hybrids; vining types need support.",
+      "seedMonths": [
+        2,
+        3
+      ],
+      "transplantMonths": null,
+      "minSunHours": 6,
+      "preferredSunHours": [
+        8,
+        10
+      ],
+      "minDepthCm": 20.32,
+      "minVolumeL": 18.927,
+      "containerSupported": true,
+      "supportRequired": true,
+      "coreVerified": true,
+      "seasonNote": "February–March general sowing window; other cultivar calendars are not merged.",
+      "containerNote": "CSU: 8 in depth, 3+ US gal; VT: 5 US gal. App uses 5 gal with the documented 8 in depth.",
+      "careNote": "Check tendrils, support and airflow; do not assume pollination from the forecast.",
+      "regionNote": "Bangladesh general guidance; no verified district-by-district suitability map. Confirm local variety and microclimate.",
+      "districts": null,
+      "sourceIds": [
+        "cucumber_bd",
+        "vt",
+        "csu",
+        "supplied_report"
+      ],
+      "fieldSources": {
+        "seedMonths": [
+          "cucumber_bd"
+        ],
+        "transplantMonths": [],
+        "minSunHours": [
+          "vt"
+        ],
+        "minDepthCm": [
+          "csu"
+        ],
+        "minVolumeL": [
+          "vt"
+        ],
+        "containerSupported": [
+          "vt",
+          "csu"
+        ],
+        "supportRequired": [
+          "supplied_report"
+        ],
+        "scientificName": [
+          "supplied_report"
+        ],
+        "reportHarvest": [
+          "supplied_report"
+        ]
+      },
+      "checkedAt": "2026-10-27",
+      "reportCheckedAt": "2026-10-22",
+      "reportHarvest": {
+        "min": 45,
+        "max": 51,
+        "unit": "days",
+        "from": "seed",
+        "note": "report range",
+        "status": "PDF-reported; not independently verified; not used for automatic scheduling"
+      },
+      "temperatureRange": null,
+      "reviewNote": "Core season/light/container evidence rechecked; measurements remain conditional across cultivars.",
+      "imagePath": null
+    }
+  ]
+}

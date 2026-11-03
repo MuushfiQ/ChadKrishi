@@ -1,0 +1,11 @@
+.env
+backend/.env
+backend/uploads/*
+!backend/uploads/.gitkeep
+node_modules/
+dist/
+coverage/
+
+
+deploy.env
+*.sql.gz
